@@ -25,27 +25,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>{this.state.users.name}</h2>
-        <p>{this.state.users.login}</p>
-        <p>{this.state.users.location}</p>
-        <p>{this.state.users.followers}</p>
-        <p>{this.state.users.following}</p>
-        <p>{this.state.users.bio}</p>
+        <div className="top">
+          <h2>{this.state.users.name}</h2>
+          <img width="150" alt="avatar" src={this.state.users.avatar_url} />
+          <p>{this.state.users.login}</p>
+          <p>{this.state.users.location}</p>
+          <p>{this.state.users.followers}</p>
+          <p>{this.state.users.following}</p>
+          <p>{this.state.users.bio}</p>
+        </div>
 
-        <p>{this.state.follow.login}</p>
-
-
-        {this.state.follow.map(x => {
-          return (
-            <div>
-              <div>
+        <div className="card-container">
+          {this.state.follow.map(x => {
+            return (
+              <div className="card">
                 <h2>{x.login}</h2>
-                <img width="200" src={x.avatar_url} key={x} alt={x} />
+                <img width="150" src={x.avatar_url} key={x} alt={x} />
               </div>
-            </div>
-          )
-        }
-        )}
+            )
+          }
+          )}
+        </div>
       </div>
     );
   }

@@ -31,3 +31,25 @@
     transform: rotate(360deg);
   }
 }
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: center;
+}
+
+.card{
+  margin: 10px;
+  background-color: lightgray;
+  height: auto;
+  border-radius: 10px;
+}
+
+.top{
+  margin-left: 350px;
+  padding:10px;
+  background-color: lightgray;
+  width: 500px;
+  border-radius: 10px;
+}
